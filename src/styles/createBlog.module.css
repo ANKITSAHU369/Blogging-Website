@@ -1,0 +1,82 @@
+.createBlogWrapper{
+    background-size: cover;
+    background-image: url("../styles/Blogging-Website-Admin.png");
+    padding: 30px;
+    height: 100vh;
+}
+.titleWrapper {
+    border:1px solid white;
+    display: flex;
+    align-items: center;
+    width:70%;
+    margin-bottom: 30px;
+    
+}
+.titleWrapper label{
+    padding: 10px;
+    border-right: 1px solid white;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.titleWrapper input{
+height:100%;
+background: transparent;
+outline: none;
+border: none;
+margin: 0px 20px;
+font-size: 14px;
+width: 100%;
+}
+.postContentWrapper{
+    
+    /* border: 1px solid black; */
+    height: 450px;
+    position: relative;
+}
+.postContentWrapper div{
+    border: none !important;
+}
+.postContentText{
+    height:80%;
+    outline: none;
+    border: none !important;
+   
+
+
+}
+.postContentWrapper>div  div{
+    border: 1px solid white !important;
+}
+
+
+/* .postContentText div:nth-child(1){
+    border: 1px solid white !important;
+    border-bottom: none;
+}
+.postContentText div:nth-child(2){
+    border: 1px solid white !important;
+    border-top: none;
+} */
+
+.ql-container.ql-snow {
+    border: 1px solid white !important
+}
+.ql-toolbar.ql-snow {
+    border: 1px solid white;
+    padding: 8px;
+}
+.postBtn{
+    position: absolute;
+    padding: 10px 20px;
+    /* background: #F01717; */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: rgb(144, 147, 236);
+    text-transform: uppercase;
+    cursor: pointer;
+    color:white;
+    bottom:0px;
+    right:0px;
+    
+}

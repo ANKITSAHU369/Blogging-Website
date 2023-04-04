@@ -1,0 +1,112 @@
+.postPage{
+    background-image: url("../styles/Blogging-Website-User.png");
+    background-size: cover;
+    min-height:100vh;
+    padding: 40px;
+    
+}
+.postPage::scroll{
+    display: none;
+}
+.updateBlogButton{
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: rgb(99, 102, 180);
+    text-transform: uppercase;
+    cursor: pointer;
+    color:white;
+    margin-right: 20px;
+    
+
+
+}
+.updateBlogButton:hover{
+    background-color: white;
+    color:rgb(99, 102, 180);;
+}
+.titleWrapper {
+    border:1px solid white;
+    display: flex;
+    align-items: center;
+    width:70%;
+    margin-bottom: 30px;
+    
+}
+.titleWrapper label{
+    padding: 10px;
+    border-right: 1px solid white;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.titleWrapper input{
+height:100%;
+background: transparent;
+outline: none;
+border: none;
+margin: 0px 20px;
+font-size: 14px;
+width: 100%;
+}
+.postContentWrapper{
+    
+    /* border: 1px solid black; */
+    height: 450px;
+    position: relative;
+}
+.postContentWrapper div{
+    border: none !important;
+}
+.postContentText{
+    height:80%;
+    outline: none;
+    border: none !important;
+   
+
+
+}
+.postContentWrapper>div  div{
+    border: 1px solid white !important;
+}
+.navBar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navBar button{
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: rgb(99, 102, 180);
+    text-transform: uppercase;
+    cursor: pointer;
+    color:white;
+    margin-right: 20px;
+}
+.navBar button:hover{
+    background-color: white;
+    color:rgb(99, 102, 180);;
+}
+.comment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.comment button{
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: rgb(99, 102, 180);
+    text-transform: uppercase;
+    cursor: pointer;
+    color:white;
+    margin-right: 20px;
+}
+.comment button:hover{
+    background-color: white;
+    color:rgb(99, 102, 180);;
+}
