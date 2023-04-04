@@ -66,7 +66,7 @@ const HomePage = ({ blogs }) => {
 export default HomePage;
 
 export async function getServerSideProps() {
-  const rootUrl = "https://blog-app-kgar.onrender.com";
+  const rootUrl = "https://blogging-website-backend.onrender.com";
   let data = [];
   const res = await axios({ url: `${rootUrl}/getBlogs`, method: "get" });
   data = res.data;

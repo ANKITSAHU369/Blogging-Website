@@ -77,7 +77,7 @@ export default function Home({ data }) {
 }
 
 export async function getServerSideProps() {
-  const rootUrl = "https://blog-app-kgar.onrender.com";
+  const rootUrl = "https://blogging-website-backend.onrender.com";
   let data = [];
   const res = await axios({ url: `${rootUrl}/getUsers`, method: "get" });
   data = res.data;

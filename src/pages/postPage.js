@@ -8,7 +8,7 @@ const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import axios from "axios";
 
 const PostPage = ({ data }) => {
-  const rootUrl = "https://blog-app-kgar.onrender.com";
+  const rootUrl = "https://blogging-website-backend.onrender.com";
   const [commentData, setCommentData] = useState("");
   const [postData, setPostData] = useState(data);
   const [edit, setEdit] = useState(false);
@@ -188,7 +188,7 @@ const PostPage = ({ data }) => {
 export default PostPage;
 
 export async function getServerSideProps(ctx) {
-  const rootUrl = "https://blog-app-kgar.onrender.com";
+  const rootUrl = "https://blogging-website-backend.onrender.com";
   let data = {};
   const res = await axios({
     url: `${rootUrl}/getBlog`,

@@ -9,7 +9,7 @@ import axios from "axios";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 export async function getServerSideProps() {
-  const rootUrl = "https://blog-app-kgar.onrender.com";
+  const rootUrl = "https://blogging-website-backend.onrender.com";
   let data = [];
   const res = await axios({ url: `${rootUrl}/getUsers`, method: "get" });
   data = res.data;
@@ -26,7 +26,7 @@ const CreatePostPage = ({ data }) => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  const rootUrl = "https://blog-app-kgar.onrender.com";
+  const rootUrl = "https://blogging-website-backend.onrender.com";
 
   useEffect(() => {
     const user = loadState("user");
