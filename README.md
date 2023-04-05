@@ -2,6 +2,23 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 # Live Site Link
 https://blogging-website-ajqq.vercel.app/
 
+# User Credentials
+1. 
+Email: admin@mail.com 
+Password: 123@admin
+
+2.
+Email: authorOne@mail.com
+Password: authorOne@123
+
+3.
+Email: authorTwo@mail.com
+Password: authorTwo@123
+
+4.
+Email: reader@mail.com
+Password: reader@123
+
 ## Getting Started
 
 First, run the development server:
