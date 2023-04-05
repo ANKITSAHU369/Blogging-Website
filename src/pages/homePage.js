@@ -8,16 +8,24 @@ const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import axios from "axios";
 
 const HomePage = ({ blogs }) => {
+  const [user, setUser] = useState(null);
+  const [blogsList, setBlogsList] = useState(blogs||[])
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
     const user = loadState("user");
+    setUser(user)
     if (!user?.isLoggedIn) {
       router.push("/");
     }
     setLoading(false);
   }, []);
+
+  const handleSearch = (e) => {
+    const tempBlogs = blogs?.filter((i) => i?.title?.includes(e?.target.value) || i?.content?.includes(e?.target?.value)) || blogs
+    setBlogsList(tempBlogs)
+  }
 
   const handleLogout = () => {
     saveState("user", null);
@@ -37,27 +45,34 @@ const HomePage = ({ blogs }) => {
     router.push("/createPostPage");
   };
 
+  if (loading) {
+    return <>Loading....</>;
+  }
+
   return (
     <main className={styles.redOneBackground}>
       <div className={styles.navBar}>
-      <button className={styles.homeButton}>Home</button>
-      <button className={styles.logoutButton} onClick={handleLogout}>LOGOUT</button>
-      <button className={styles.createBlogButton} onClick={handleCreateBlog}>CREATE BLOG</button>
+        <button className={styles.homeButton}>Home</button>
+        {user?.userType !== "reader" && <button className={styles.createBlogButton} onClick={handleCreateBlog}>CREATE BLOG</button>}
+        <input type="text" placeholder={"Search"} onChange={handleSearch}/>
+        <button className={styles.logoutButton} onClick={handleLogout}>LOGOUT</button>
       </div>
       <div style={{margin:"30px"}}>
-      {blogs?.map((blog, index) => (
-        <div
-          key={index}
-          className={styles.content}
-          // onClick={() => handleBlogClick(blog.blogId)}
-          // style={{ cursor: "pointer",border:"1px solid white",marginBottom:"10px" }}
-          // style={{padding:"20px"}}
-        >
-          <h3 style={{padding:"0px 15px"}}>{blog.title}</h3>
-          <ReactQuill value={blog.content} readOnly={true} theme={"bubble"} />
-          <button onClick={() => handleBlogClick(blog.blogId)}>view</button>
-        </div>
-      ))}
+      {blogsList?.length ?
+        blogsList?.map((blog, index) => (
+          <div
+            key={index}
+            className={styles.content}
+          >
+            <h3 style={{padding:"0px 15px"}}>{blog.title}</h3>
+            <ReactQuill value={blog.content} readOnly={true} theme={"bubble"} />
+            <button className={styles.viewButton} onClick={() => handleBlogClick(blog.blogId)}>view</button>
+          </div>
+        ))
+        :
+        <span>No blogs added yet</span>
+    
+      }
       </div>
     </main>
   );

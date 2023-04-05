@@ -112,12 +112,13 @@ const PostPage = ({ data }) => {
           <div className={styles.navBar}>
           <h1>{postData?.title}</h1>
           <div >
-          {(postData.userId === user.id || user.userType === "admin") && (
+          {(postData.userId === user.userId || user.userType === "admin") && (
             <button onClick={() => setEdit(true)}>Edit</button>
           )}
           {user.userType === "admin" && (
             <button onClick={handleDelete}>Delete</button>
           )}
+          <button onClick={()=>router.push("/homePage")}>Home</button>
           <button onClick={handleLogout}>Logout</button>
           </div>
           </div>

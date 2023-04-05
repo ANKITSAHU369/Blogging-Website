@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getUsers } from "../utility/users";
 import { saveState, loadState } from "../utility/serializer";
 import { useRouter } from "next/router";
 import axios from "axios";

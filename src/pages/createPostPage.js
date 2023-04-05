@@ -55,16 +55,15 @@ const CreatePostPage = ({ data }) => {
       content: blogContent,
       userName: user.userName,
       postTimestamp: currDate,
-      userId: user.id,
+      userId: user.userId,
       comments: [],
     };
 
     axios({
-      url: "https://blog-app-kgar.onrender.com/addBlog",
+      url: `${rootUrl}/addBlog`,
       method: "post",
       data: newBlog,
     }).then((res) => {
-      console.log(res.data);
       router.push("/homePage");
       setBlogTitle("");
       setBlogContent("");

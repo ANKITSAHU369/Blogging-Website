@@ -17,13 +17,14 @@
     right: 0px;
 
 }
-/* .logoutButton :hover{
- color: rgb(155, 230, 43);
-} */
+.logoutButton:hover{
+    background-color: white;
+    color:rgb(99, 102, 180);;
+}
+
 
 .homeButton{
     padding: 10px 20px;
-    /* background: #F01717; */
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -39,7 +40,6 @@
 }
 .createBlogButton{
     padding: 10px 20px;
-    /* background: #F01717; */
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -47,6 +47,7 @@
     text-transform: uppercase;
     cursor: pointer;
     color:white;
+    margin-right: 20px;
 }
 .navBar{
     padding: 30px;
@@ -60,10 +61,10 @@
     margin-bottom: 15px;
     border-radius: 8px;
     position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .content button{
     padding: 10px 20px;
-    /* background: #F01717; */
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -75,9 +76,8 @@
     position: absolute;
     bottom: 10px;
     right:0px
-
 }
-.content button:hover{
+.homeButton:hover, .createBlogButton:hover, .viewButton:hover{
     background-color: white;
     color:rgb(99, 102, 180);;
 }
